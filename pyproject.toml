@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "yandex-alice-chatgpt"
+name = "alice-chatgpt-api"
 version = "0.1.0"
 description = ""
 authors = ["chubukovmn <ay-ya@ya.ru>"]
