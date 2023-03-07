@@ -6,13 +6,13 @@ http://45.87.104.115:8321/api/alice <br>
 http://oo-serv.ru/api/alice
 <br><br>
 **Тестовый запрос:** <br>
-`curl --location --request POST 'http://45.87.104.115:8321/api/alice' \
+``curl --location --request POST 'http://45.87.104.115:8321/api/alice' \
 --header 'Content-Type: application/json' \
 --data-raw '{
         "request": {"original_utterance": "Привет"},
         "session": {"session_id": "AAAAAAAA-AAAA-AAAA-AAAA-AAAAAAAAAAAA"}, 
         "version": "1.0"
-    }`
+    }``
    <br><br>
 **Посмотреть трафик в докере:**<br>
 `tcpdump 'port 8321'`
