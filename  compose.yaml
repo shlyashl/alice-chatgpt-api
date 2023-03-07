@@ -1,0 +1,23 @@
+version: "3.10"
+
+services:
+
+  alice_chatgpt:
+    build:
+      context: .
+      dockerfile: ./dockerfile
+    container_name: crowd_monitoring
+    image: alice_chatgpt_image
+    restart: always
+    environment:
+      OAI_TOKEN: $OAI_TOKEN
+      ALICE_TOKEN: $ALICE_TOKEN
+    expose:
+      - 8321
+    networks:
+      - deml
+
+networks:
+  deml:
+    driver: bridge
+    name: "deml"
