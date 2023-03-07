@@ -4,7 +4,6 @@ version = "0.1.0"
 description = ""
 authors = ["chubukovmn <ay-ya@ya.ru>"]
 readme = "README.md"
-packages = [{include = "yandex_alice_chatgpt"}]
 
 [tool.poetry.dependencies]
 python = "^3.9"
