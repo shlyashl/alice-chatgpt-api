@@ -1,21 +1,18 @@
 version: "3.10"
 
 services:
-
   alice_chatgpt:
     build:
-      context: .
+      context: ./
       dockerfile: ./Dockerfile
     container_name: alice_chatgpt
     image: alice_chatgpt_image
     restart: always
+    ports:
+      - ${API_PORT}:${API_PORT}
     environment:
-      OAI_TOKEN: $OAI_TOKEN
-      ALICE_TOKEN: $ALICE_TOKEN
-    expose:
-      - 8321
-    networks:
-      - deml
+      OAI_TOKEN: ${OAI_TOKEN}
+      ALICE_TOKEN: ${ALICE_TOKEN}
 
 networks:
   deml:
