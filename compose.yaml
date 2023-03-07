@@ -4,9 +4,18 @@ services:
   alice_chatgpt:
     build:
       context: ./
+      network: host
       dockerfile: ./Dockerfile
     container_name: alice_chatgpt
     image: alice_chatgpt_image
+    command: gunicorn main:app
+             --workers ${API_WORKERS_COUNT}
+             --worker-class uvicorn.workers.UvicornWorker
+             --bind ${API_HOST}:${API_PORT}
+             --access-logfile -
+             --max-requests ${API_MAX_REQUESTS}
+             --timeout ${API_TIMEOUT_PER_WORKER}
+
     restart: always
     ports:
       - ${API_PORT}:${API_PORT}
