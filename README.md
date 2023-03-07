@@ -5,7 +5,7 @@
 http://45.87.104.115:8321/api/alice <br>
 http://oo-serv.ru/api/alice
 <br><br>
-**Тестовый запрос:** 
+**Тестовый запрос:** <br>
 `curl --location --request POST 'http://45.87.104.115:8321/api/alice' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -14,5 +14,5 @@ http://oo-serv.ru/api/alice
         "version": "1.0"
     }`
    <br><br>
-**Посмотреть трафик в докере:**
+**Посмотреть трафик в докере:**<br>
 `tcpdump 'port 8321'`
