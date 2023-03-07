@@ -3,7 +3,7 @@
 <br><br>
 **Endpoint:** <br>
 http://45.87.104.115:8321/api/alice <br>
-http://oo-serv.ru/api/alice
+https://oo-serv.ru/api/alice
 <br><br>
 **Тестовый запрос:** <br>
 ``curl --location --request POST 'http://45.87.104.115:8321/api/alice' \
