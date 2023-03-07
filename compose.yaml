@@ -4,7 +4,6 @@ services:
   alice_chatgpt:
     build:
       context: ./
-      network: host
       dockerfile: ./Dockerfile
     container_name: alice_chatgpt
     image: alice_chatgpt_image
