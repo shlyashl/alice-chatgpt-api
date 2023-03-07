@@ -6,7 +6,7 @@ services:
     build:
       context: .
       dockerfile: ./Dockerfile
-    container_name: crowd_monitoring
+    container_name: alice_chatgpt
     image: alice_chatgpt_image
     restart: always
     environment:
@@ -19,5 +19,4 @@ services:
 
 networks:
   deml:
-    driver: bridge
     name: "deml"
