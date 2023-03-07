@@ -22,7 +22,10 @@ services:
     environment:
       OAI_TOKEN: ${OAI_TOKEN}
       ALICE_TOKEN: ${ALICE_TOKEN}
+    networks:
+      - deml
 
 networks:
   deml:
-    name: "deml"
+    driver: bridge
+    name : "deml"
