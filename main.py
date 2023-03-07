@@ -62,4 +62,4 @@ async def root(request: Request, background_tasks: BackgroundTasks, answer='Пр
 
 
 if __name__ == "__main__":
-    uvicorn.run("main:app", port=5000, log_level="info")
+    uvicorn.run("main:app", port=5500, log_level="info")
