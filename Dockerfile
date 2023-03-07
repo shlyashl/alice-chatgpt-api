@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY . /app/
 
-RUN apt-get update \
+RUN apt update\
     && pip install poetry
 
 RUN poetry config virtualenvs.create false \
