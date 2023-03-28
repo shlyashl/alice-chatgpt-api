@@ -16,7 +16,7 @@ class GPTSessions:
     def create_gpt_answer(self, session_id: str, promt: str):
         self.answers[session_id] = 'Created'
         completion = openai.Completion.create(engine='text-davinci-003', prompt=promt, max_tokens=1024, n=1,
-                                              stop=None, temperature=0.6)
+                                              stop=None, temperature=0.2)
         self.answers[session_id] = completion.choices[0].text
 
     def get_gpt_answer(self, session_id: str):
