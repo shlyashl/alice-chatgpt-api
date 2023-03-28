@@ -41,7 +41,7 @@ async def root(request: Request, background_tasks: BackgroundTasks, answer='Пр
 
     if promt and not sessions.get_gpt_answer(session_id):
         background_tasks.add_task(sessions.create_gpt_answer, session_id, promt)
-        for i in range(10):
+        for i in range(25):
             if sessions.get_gpt_answer(session_id):
                 break
             else:
